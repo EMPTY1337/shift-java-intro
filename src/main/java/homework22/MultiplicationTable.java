@@ -45,9 +45,9 @@ public class MultiplicationTable {
         int max = Math.max(firstNumber, secondNumber);
 
         // Вычисляем сколько чисел будет в таблице
-        int count = 0;
+        int count = 1;
         int current = min;
-        while (current <= max) {
+        while (current < max) {
             count++;
             current += step;
         }
