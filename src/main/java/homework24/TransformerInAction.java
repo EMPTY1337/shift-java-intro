@@ -34,7 +34,5 @@ public class TransformerInAction {
         demoleasher.charge();
         demoleasher.transform();
         demoleasher.showProperties();
-
-
     }
 }
