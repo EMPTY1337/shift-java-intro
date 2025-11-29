@@ -1,16 +1,16 @@
 package main.java.homework24;
 
-class Deceptikon extends Transformer {
-    public Deceptikon(String name) {
+class Decepticon extends Transformer {
+    public Decepticon(String name) {
         super(name);
         this.kindness = false;
     }
-    private final String teamName = "Deceptikons";
-    private final String eyeColor = "red";
+    private static final String teamName = "Deceptikons";
+    private static final String eyeColor = "red";
     private boolean kindness;
 
     public void transform() {
-        System.out.println(name + " transform in  superjet");
+        System.out.println(name + " transforms in  superjet");
     }
 
     public String getTeamName() {

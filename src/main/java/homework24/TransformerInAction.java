@@ -2,37 +2,39 @@ package main.java.homework24;
 
 public class TransformerInAction {
     public static void main(String[] args){
-        Autobot BumbleBee = new Autobot("BumbleBee");
-        Deceptikon StarScream = new Deceptikon("StarScream");
-        Autobot OptimusPrime = new Autobot("OptimusPrime");
-        Deceptikon Demoleasher = new Deceptikon("Demoleasher");
+        Autobot bumbleBee = new Autobot("BumbleBee");
+        Decepticon starScream = new Decepticon("StarScream");
+        Autobot optimusPrime = new Autobot("OptimusPrime");
+        Decepticon demoleasher = new Decepticon("Demoleasher");
 
         System.out.println("*** BumbleBee actions ***");
-        BumbleBee.run();
-        BumbleBee.fire();
-        BumbleBee.charge();
-        BumbleBee.transform();
-        BumbleBee.showProperties();
+        bumbleBee.run();
+        bumbleBee.fire();
+        bumbleBee.charge();
+        bumbleBee.transform();
+        bumbleBee.showProperties();
 
         System.out.println("*** StarScream actions ***");
-        StarScream.run();
-        StarScream.fire();
-        StarScream.charge();
-        StarScream.transform();
-        StarScream.showProperties();
+        starScream.run();
+        starScream.fire();
+        starScream.charge();
+        starScream.transform();
+        starScream.showProperties();
 
         System.out.println("*** OptimusPrime actions ***");
-        OptimusPrime.run();
-        OptimusPrime.fire();
-        OptimusPrime.charge();
-        OptimusPrime.transform();
-        OptimusPrime.showProperties();
+        optimusPrime.run();
+        optimusPrime.fire();
+        optimusPrime.charge();
+        optimusPrime.transform();
+        optimusPrime.showProperties();
 
         System.out.println("*** Demoleasher actions ***");
-        Demoleasher.run();
-        Demoleasher.fire();
-        Demoleasher.charge();
-        Demoleasher.transform();
-        Demoleasher.showProperties();
+        demoleasher.run();
+        demoleasher.fire();
+        demoleasher.charge();
+        demoleasher.transform();
+        demoleasher.showProperties();
+
+
     }
 }
