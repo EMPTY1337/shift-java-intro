@@ -3,9 +3,9 @@ package main.java.homework24;
 public class TransformerInAction {
     public static void main(String[] args){
         Autobot bumbleBee = new Autobot("BumbleBee");
-        Deceptikon starScream = new Deceptikon("StarScream");
+        Decepticon starScream = new Decepticon("StarScream");
         Autobot optimusPrime = new Autobot("OptimusPrime");
-        Deceptikon demoleasher = new Deceptikon("Demoleasher");
+        Decepticon demoleasher = new Decepticon("Demoleasher");
 
         System.out.println("*** BumbleBee actions ***");
         bumbleBee.run();

@@ -18,5 +18,4 @@ public class Transformer {
         System.out.println(name + "  is  charging");
     }
 
-
 }

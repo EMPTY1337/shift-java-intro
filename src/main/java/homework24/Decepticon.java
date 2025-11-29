@@ -1,7 +1,7 @@
 package main.java.homework24;
 
-class Deceptikon extends Transformer {
-    public Deceptikon(String name) {
+class Decepticon extends Transformer {
+    public Decepticon(String name) {
         super(name);
         this.kindness = false;
     }
