@@ -11,5 +11,9 @@ abstract class Transformer {
     public String getName() {
         return name;
     }
+    public abstract void run();
+    public abstract void fire();
+    public abstract void charge();
+    public abstract void showProperties();
 }
 

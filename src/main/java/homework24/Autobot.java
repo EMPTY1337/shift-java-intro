@@ -5,8 +5,8 @@ class Autobot extends Transformer {
         super(name);
         this.kindness = true;
     }
-    private final String teamName = "Autobots";
-    private final String eyeColor = "blue";
+    private static String teamName = "Autobots";
+    private static String eyeColor = "blue";
     private boolean kindness;
 
     public void transform() {

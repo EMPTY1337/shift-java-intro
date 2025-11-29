@@ -5,13 +5,13 @@ class Deceptikon extends Transformer implements Action {
         super(name);
         this.kindness = false;
     }
-    private final String teamName = "Deceptikons";
-    private final String eyeColor = "red";
+    private static final String teamName = "Deceptikons";
+    private static final String eyeColor = "red";
     private boolean kindness;
 
     @Override
     public void transform() {
-        System.out.println(name + " transform in  superjet");
+        System.out.println(name + " transforms in  superjet");
     }
 
     @Override
@@ -23,6 +23,10 @@ class Deceptikon extends Transformer implements Action {
     public void charge() {
         System.out.println(name + " is charging by negative emotions");
     }
+
+    @Override
+    public void run()
+    {System.out.println(name + " is running");}
 
 
     public void showProperties() {

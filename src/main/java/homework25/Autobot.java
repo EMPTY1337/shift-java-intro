@@ -5,8 +5,8 @@ class Autobot extends Transformer implements Action{
         super(name);
         this.kindness = true;
     }
-    private final String teamName = "Autobots";
-    private final String eyeColor = "blue";
+    private static final String teamName = "Autobots";
+    private static final String eyeColor = "blue";
     private boolean kindness;
 
     @Override
@@ -23,6 +23,10 @@ class Autobot extends Transformer implements Action{
     public void charge() {
         System.out.println(name + " is charging by positive energy");
     }
+
+    @Override
+    public void run() {System.out.println(name + " is running");}
+
 
     public void showProperties() {
         System.out.println("*** " + name + " Properties ***");
