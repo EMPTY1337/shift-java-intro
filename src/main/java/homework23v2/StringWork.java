@@ -8,11 +8,11 @@ public class StringWork{
 
         // Получаем исходные данные
         String userText = getUserText(scanner);
-        char symbolToRemove = getSymbolForRemoval(scanner);
+        String symbolToRemove = getSymbolForRemoval(scanner);
 
         // Обрабатываем текст
         String cleanedText = cleanTextSpaces(userText);
-        String modifiedText = modifyText(cleanedText, symbolToRemove);
+        String modifiedText = replaceSymbol(cleanedText, symbolToRemove);
         String finalText = cleanTextSpaces(modifiedText);
 
         // Показываем итог
@@ -26,25 +26,21 @@ public class StringWork{
         while (true) {
             System.out.print("Введите ваш текст: ");
             String text = scanner.nextLine();
-
-            if (text.length() > 1) {
+            if (text.length() > 1 && text.matches("^[a-zA-Zа-яА-Я0-9.,!?:; ]+$") && !text.contains("  ")) {
                 return text;
             }
-            System.out.println("Текст должен состоять минимум из 2 символов, попробуйте снова.");
+            System.out.println("Текст должен состоять минимум из 2 символов, содержать только буквы (латиница/кириллица), цифры, знаки препинания (. , ! ? : ;) и одиночные пробелы.");
         }
     }
 
     // Получение символа для удаления
-    public static char getSymbolForRemoval(Scanner scanner) {
+    public static String getSymbolForRemoval(Scanner scanner) {
         while (true) {
             System.out.print("Какой символ заменить пробелами?: ");
             String input = scanner.nextLine();
 
-            if (input.length() == 1) {
-                char symbol = input.charAt(0);
-                if (symbol != ' ') {
-                    return symbol;
-                }
+            if (input.length() == 1 && !input.equals(" ")) {
+                return input;
             }
             System.out.println("Нужен один любой символ кроме пробела.");
         }
@@ -52,34 +48,15 @@ public class StringWork{
 
     // Очистка лишних пробелов
     public static String cleanTextSpaces(String text) {
-        StringBuilder result = new StringBuilder();
-        boolean foundSpace = false;
-
-        for (char currentChar : text.toCharArray()) {
-            if (currentChar == ' ') {
-                if (!foundSpace) {
-                    result.append(currentChar);
-                    foundSpace = true;
-                }
-            } else {
-                result.append(currentChar);
-                foundSpace = false;
-            }
-        }
-
-        return result.toString().trim();
+        return text.replaceAll("\\s+", " ");
     }
+
 
     // Замена символов на пробелы
-    public static String modifyText(String text, char targetSymbol) {
-        char[] characters = text.toCharArray();
-        for (int i = 0; i < characters.length; i++) {
-            if (characters[i] == targetSymbol) {
-                characters[i] = ' ';
-            }
-        }
-        return new String(characters);
+    public static String replaceSymbol(String text, String targetSymbol) {
+        return text.replace(targetSymbol, " ");
     }
+
 
     // Сравнение и вывод результатов
     public static void showComparison(String before, String after) {
