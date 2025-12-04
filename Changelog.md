@@ -8,3 +8,10 @@
 29.11.25 homework24 -> Модификатор static добавлен, исправлены грамматические ошибки, названия переменных
 29.11.25 homework25 -> Добавлен в списке вывод действий трансформеров и их свойства
 29.11.25 homework24/25 ->  Вынес повторяющиеся действия трансформеров в отдельный метод
+
+3.12.25 homework23v2
+В getUserText() - добавлена доп проверка
+В getSymbolForRemoval() - изменен тип метода с char на String, используется input.equals(" ") вместо symbol != ' '
+В cleanTextSpaces() - заменен цикл на: text.replaceAll("\\s+", " ")
+Убран .trim()
+В modifyText() - переименован в replaceSymbol, упрощен до return text.replace(targetSymbol, " ");
